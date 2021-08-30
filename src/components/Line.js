@@ -3,13 +3,14 @@ import '../App.css'
 
 const Line = (props) => {
   return (
-    <div className="Line">
-      <div className="container">
-        {props.title} {props.symbol}
-      </div>
-    </div>
-    )
+    <ul className="Line">
+      <li title="click to copy" onClick={() => navigator.clipboard.writeText(props.symbol)}>
+        <p>{props.title}</p>
+        <p>{props.symbol}</p>
+      </li>
+    </ul>
+  )
+  
 }
 
-
-export default Line;
+export default Line
